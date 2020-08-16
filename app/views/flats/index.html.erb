@@ -1,0 +1,19 @@
+<h1>All our flats</h1>
+
+<ul>
+  <% @flats.each do |flat| %>
+  <li><%= flat.description.capitalize %></li>
+  <li><%= flat.address %></li>
+  <li><%= flat.number_of_guests %></li>
+  <li><%= flat.price_per_night %></li>
+  <%= link_to "More info", flat_path(flat) %>
+  <%= link_to "Edit", edit_flat_path(flat) %>
+  <%= link_to "Remove",
+    flats_path,
+    method: :delete,
+    data: {confirm: "Are you sure ?"} %>
+  <% end %>
+</ul>
+
+
+
