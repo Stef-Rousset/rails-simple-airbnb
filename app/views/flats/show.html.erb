@@ -1,8 +1,48 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=8);">
+</div>
 
-<%= image_tag "https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80", alt: "appartement", width: 300, heigth: 200 %>
-<h2><%= @flat.name %></h2>
-<p><%= @flat.address %></p>
-<h3>A little bit more about the flat</h3>
-<p><%= @flat.description %></p>
+<div class="flat">
+  <div class="flat-infos">
+    <div class="infos">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="details">
+      <h3>A little bit more about the flat</h3>
+      <p><%= @flat.description %></p>
+    </div>
+    <%= link_to "Back to list", flats_path, class: "btn btn-secondary" %>
+  </div>
+  <div class="flat-booking">
+    <div class="form">
+      <h4>Book this place!</h4>
+      <form action="">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text">From</span>
+        <input type="text" class="form-control" placeholder= "12/10/2017", style="height: 40px">
+      </div>
+      <div class="input-group input-group-sm">
+        <span class="input-group-text">To</span>
+        <input type="text" class="form-control" placeholder= "13/10/2017", style="height: 40px">
+      </div>
+      <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+    </div>
+    <div class="book-details">
+      <h4>Details</h4>
+        <div class="icons">
+          <p><i class="fas fa-user-friends"></i><%= @flat.number_of_guests %></p>
+          <p><i class="fas fa-euro-sign"></i><%= @flat.price_per_night %></p>
+        </div>
+    </div>
+    <div class="book-links">
+      <p>Share</p>
+      <div class="socials">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-pinterest-square"></i>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Back to list", flats_path %>
+

@@ -1,5 +1,5 @@
 <h1>Edit flat</h1>
-<% simple_form_for (@flat) do |f| %>
+<%= simple_form_for (@flat) do |f| %>
 <%= f.input :name %>
 <%= f.input :address %>
 <%= f.input :description %>
@@ -7,3 +7,4 @@
 <%= f.input :price_per_night %>
 <%= f.submit "Update flat", class: "btn btn-primary" %>
 <% end %>
+<%= link_to "Back to list", flats_path, class: "btn btn-primary" %>

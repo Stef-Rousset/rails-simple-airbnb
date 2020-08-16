@@ -1,3 +1,57 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// show
+.flat {
+  display: flex;
+  justify-content: space-around;
+  z-index: 2;
+  margin-top: -50px;
+}
+.infos {
+  background-color: #F8F9FA;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 3px #E9ECEF;
+   h1, p {
+  padding: 10px 10px
+ }
+}
+.details {
+  background-color: #F8F9FA;
+  box-shadow: 1px 1px 3px #E9ECEF;
+  height: 300px;
+  margin-bottom: 20px;
+    h3, p {
+      padding: 10px 10px
+    }
+}
+.flat-booking {
+  display:flex;
+  flex-direction: column;
+}
+.form, .book-details, .book-links {
+  background-color: #F8F9FA;
+  box-shadow: 1px 1px 3px #E9ECEF;
+  margin: 0px 30px;
+  margin-bottom: 10px;
+
+  padding: 10px 20px;
+}
+.book-details {
+  display: flex;
+  flex-direction: column;
+  .icons {
+    display: flex;
+    p {
+      margin-right: 5px;
+    }
+  }
+}
+.book-links {
+  display: flex;
+  justify-content: space-between;
+    .socials {
+      font-size: 20px;
+    }
+}

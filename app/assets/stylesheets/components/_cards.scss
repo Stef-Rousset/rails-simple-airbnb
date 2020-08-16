@@ -1,0 +1,38 @@
+// index
+.card-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.cards {
+  display : flex;
+  justify-content: space-between;
+ h1 {
+  margin-bottom: 10px,
+  }
+}
+.card-body {
+  background-color: #F8F9FA;
+}
+.card-title {
+  font-weight: bold;
+}
+.card-infos {
+  display: flex;
+  justify-content: space-between;
+  .fas {
+    margin-right: 3px;
+  }
+}
+.card-links {
+  margin: 20px 10px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  .yellow {
+    color: #ffd571;
+  }
+  .red {
+    color: #810000;
+  }
+}
